@@ -1,10 +1,11 @@
-//Ali Kooshesh and Lauryn Loudermilk
 #include<unistd.h>
 #include<stdlib.h>
 #include<iostream>
 #include "Player.hpp"
 #include "Match.hpp"
 #include "MatchScore.hpp"
+#include "Set.hpp"
+#include "SetScore.hpp"
 
 /*
  The program simulates a tennis match.  It first draws a random
@@ -42,6 +43,7 @@
  until the tie breaker is over.
  
  Written by: Ali A. Kooshesh
+ Edited by: Lauryn Loudermilk
  */
 
 
@@ -60,12 +62,12 @@ int main()
     Player *p1 = new Player( prob1 );
     Player *p2 = new Player( prob2 );
     
-    Match *match = new Match(p1, p2);
-    Score *score = match->play( p1 );
+    Set *set = new Set( p1, p2 );
+    Score *score = set->play( p1 );
     score->print();
     
-    delete match;
-    delete reinterpret_cast<MatchScore *>(score);
+    delete set;
+    delete  reinterpret_cast<MatchScore *>(score);
     delete p1;
     delete p2;
     

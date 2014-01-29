@@ -1,4 +1,7 @@
 //Ali Kooshesh and Lauryn Loudermilk
+//Project 1 - CS470
+//Object Oriented Tennis Simulator
+
 #include "Competition.hpp"
 #include "Player.hpp"
 

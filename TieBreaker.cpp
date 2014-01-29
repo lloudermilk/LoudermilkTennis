@@ -7,6 +7,7 @@
 TieBreaker::TieBreaker( Player *p1, Player *p2 ): Competition( p1, p2 ) {}
 
 Score *TieBreaker::play( Player *p ) {
+    //for switching server
     bool shouldSwitch = false;
     
     TieBreakerScore *score = new TieBreakerScore(player1(),player2());
