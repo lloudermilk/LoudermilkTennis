@@ -1,19 +1,20 @@
 //Ali Kooshesh and Lauryn Loudermilk
 #include "TieBreaker.hpp"
 #include "TieBreakerScore.hpp"
+#include "PointScore.cpp"
 #include "Game.hpp"
 
 TieBreaker::TieBreaker( Player *p1, Player *p2 ): Competition( p1, p2 ) {}
 
 Score *TieBreaker::play( Player *p ) {
-    Score *score = new TieBreakerScore(player1(),player2());
     bool shouldSwitch = false;
-    while (!score->haveAWinner())
-    {
-        Game *game = new Game(player1(),player2());
-        Score *gameScore = game->play(p);
-        score->addScore(p);
-        delete game;
+    
+    TieBreakerScore *score = new TieBreakerScore(player1(),player2());
+    score->addScore(reinterpret_cast<PointScore *>(p->serveAPoint())->getWinner());
+    p = p->otherPlayer(p);
+    
+    while (!score->haveAWinner()){
+        score->addScore(reinterpret_cast<PointScore *>(p->serveAPoint())->getWinner());
         if (shouldSwitch)
             p = p->otherPlayer(p);
         //this works to switch servers every other serve

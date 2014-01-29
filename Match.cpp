@@ -10,7 +10,7 @@ Score *Match::play( Player *p ) {
     
     while( !score->haveAWinner() ) {
         Set *set = new Set (player1(), player2());
-        Score *setScore = set->play(player1());
+        Score *setScore = set->play(p);
         score->addScore(setScore);
         delete set;
         p = p->otherPlayer(p);
