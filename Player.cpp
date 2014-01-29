@@ -1,7 +1,6 @@
+//Ali Kooshesh and Lauryn Loudermilk
 #include<iostream>
 #include<stdlib.h>
-
-//Ali Kooshesh and Lauryn Loudermilk
 #include "Player.hpp"
 #include "PointScore.hpp"
 
