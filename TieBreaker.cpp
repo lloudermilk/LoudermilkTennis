@@ -1,7 +1,7 @@
 //Ali Kooshesh and Lauryn Loudermilk
 #include "TieBreaker.hpp"
 #include "TieBreakerScore.hpp"
-#include "PointScore.cpp"
+#include "PointScore.hpp"
 #include "Game.hpp"
 
 TieBreaker::TieBreaker( Player *p1, Player *p2 ): Competition( p1, p2 ) {}
