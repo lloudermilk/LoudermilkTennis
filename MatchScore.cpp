@@ -22,7 +22,7 @@ void MatchScore::addScore( Score *score ) {
 }
 
 void MatchScore::print() {
-    cout << "   Set No.    Player A          Player B\n" << endl;
+    cout << "   Set No.    Player A          Player B\n";
     for( int i = 0; i < setNumber; i++ ){
         cout << setw(7) << i+1;
         scores[i]->print();
