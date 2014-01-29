@@ -1,7 +1,12 @@
 //Ali Kooshesh and Lauryn Loudermilk
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+#include <stdlib.h>
+
 #include "SetScore.hpp"
+
+using namespace std;
 
 SetScore::SetScore( Player *p1, Player *p2 ): Score(p1, p2), tieScore(0) {}
   
@@ -20,9 +25,7 @@ void SetScore::addTieScore( TieBreakerScore *score ) {
 }
 
 void SetScore::print() {
-    std::cout << "SetScore...   printing begins" << std::endl;
-    std::cout << "p1 score = " << player1Score() << "\np2 Score = " << player2Score() << std::endl;
+    cout << setw(10) << player1Score() << setw(18) << player2Score() << endl;
     if( tieScore != NULL )
       tieScore->print();
-    std::cout << "SetScore...   printing ends" << std::endl;
 }
