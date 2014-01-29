@@ -25,7 +25,8 @@ void SetScore::addTieScore( TieBreakerScore *score ) {
 }
 
 void SetScore::print() {
-    cout << setw(10) << player1Score() << setw(18) << player2Score() << endl;
+    cout << setw(10) << player1Score() << setw(18) << player2Score();
     if( tieScore != NULL )
       tieScore->print();
+    cout << endl;
 }

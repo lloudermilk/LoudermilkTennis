@@ -14,5 +14,5 @@ bool TieBreakerScore::haveAWinner() {
 }
 
 void TieBreakerScore::print(){
-    cout << setw(16) << "(tie breaker  " << player1Score() << "-" << player2Score() << ")" << endl;
+    cout << setw(16) << "(tie breaker  " << player1Score() << "-" << player2Score() << ")";
 }

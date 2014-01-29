@@ -18,13 +18,15 @@ bool MatchScore::haveAWinner()  {
 void MatchScore::addScore( Score *score ) {
     scores[setNumber] = reinterpret_cast<SetScore *>(score);
     setNumber++;
+    score->getWinner() == player1() ? p1Score++ : p2Score++;
 }
 
 void MatchScore::print() {
     cout << "   Set No.    Player A          Player B\n" << endl;
     for( int i = 0; i < setNumber; i++ ){
-        cout << setw(7) << i << endl;
+        cout << setw(7) << i+1;
         scores[i]->print();
+        cout << endl;
     }
 }
 
