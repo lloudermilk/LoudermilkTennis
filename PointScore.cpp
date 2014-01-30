@@ -1,4 +1,6 @@
-//Ali Kooshesh and Lauryn Loudermilk
+//Lauryn Loudermilk
+//Project 1 - CS470
+//Object Oriented Tennis Simulator
 #include <iostream>
 #include "PointScore.hpp"
 #include "Player.hpp"
@@ -9,7 +11,8 @@ bool PointScore::haveAWinner() {
 }
 
 void PointScore::print() {
-  std::cout << "PointScore...   printing begins" << std::endl;
-  std::cout << "p1 score = " << player1Score() << "\np2 Score = " << player2Score() << std::endl; 
-  std::cout << "PointScore...   printing ends" << std::endl;
+    //Altered to match output of tennis.cpp
+    std::cout << "PointScore...   printing begins" << std::endl;
+    std::cout << "p1 score = " << player1Score() << "\np2 Score = " << player2Score() << std::endl;
+    std::cout << "PointScore...   printing ends" << std::endl;
 }

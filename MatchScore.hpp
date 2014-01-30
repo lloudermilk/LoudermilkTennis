@@ -1,4 +1,6 @@
-//Ali Kooshesh and Lauryn Loudermilk
+//Lauryn Loudermilk
+//Project 1 - CS470
+//Object Oriented Tennis Simulator
 #ifndef _MatchScore_hpp
 #define _MatchScore_hpp
 

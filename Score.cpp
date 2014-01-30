@@ -1,4 +1,6 @@
-//Ali Kooshesh and Lauryn Loudermilk
+//Lauryn Loudermilk
+//Project 1 - CS470
+//Object Oriented Tennis Simulator
 #include "Score.hpp"
 
 Score::Score( Player *player1, Player *player2 ): p1( player1 ), p2( player2 ) {

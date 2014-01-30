@@ -1,3 +1,6 @@
+//Lauryn Loudermilk
+//Project 1 - CS470
+//Object Oriented Tennis Simulator
 #include<unistd.h>
 #include<stdlib.h>
 #include<iostream>
@@ -62,6 +65,7 @@ int main()
     Player *p1 = new Player( prob1 );
     Player *p2 = new Player( prob2 );
     
+    //The only changes I made were going from game to match below
     Match *match = new Match( p1, p2 );
     Score *score = match->play( p1 );
     score->print();

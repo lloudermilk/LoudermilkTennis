@@ -1,4 +1,4 @@
-//Ali Kooshesh and Lauryn Loudermilk
+//Lauryn Loudermilk
 //Project 1 - CS470
 //Object Oriented Tennis Simulator
 
