@@ -33,6 +33,12 @@ void MatchScore::print() {
         scores[i]->print();
         cout << endl;
     }
+    if( player1Score() > player2Score() )
+        cout << "\nPlayer A wins the match " << player1Score() << " sets to "
+        << player2Score() << endl;
+    else
+        cout << "\nPlayer B wins the match " << player2Score() << " sets to "
+        << player1Score() << endl;
 }
 
 MatchScore::~MatchScore() {
